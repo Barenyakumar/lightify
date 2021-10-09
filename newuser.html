@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>new</title>
+    <style>
+      .cards-group {
+display: flex;
+justify-content: center;
+}
+.card img {
+max-width: 100%;
+max-height: 100%;
+}
+.card {
+margin: 0 0.5em;
+box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+border: none;
+border-radius: 0;
+}
+.carousel-inner {
+padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+background-color: #e1e1e1;
+width: 5vh;
+height: 5vh;
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+.card img {
+  height: 11em;
+}
+}
+  </style>
+</head>
+<body>
+
+  <!-- modals for signup and login  -->
+
+
+
+
+  <!-- modal for blind -->
+
+<!-- ............................................ -->
+
+
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class=" modal-title" id="exampleModalToggleLabel">Log in to get writer</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="container h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                  <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-3">
+                      <div class="row justify-content-center">
+                        <div class="col ">
+          
+                          <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4 ">Log in</p>
+          
+                          <form class="mx-1 "> 
+          
+                            <div class="d-flex flex-row align-items-center mb-2">
+                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="email" id="form3Example3c" class="form-control" />
+                                <label class="form-label" for="form3Example3c">Your Email</label>
+                              </div>
+                            </div>
+          
+                            <div class="d-flex flex-row align-items-center mb-2">
+                              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="password" id="form3Example4c" class="form-control" />
+                                <label class="form-label" for="form3Example4c">Password</label>
+                              </div>
+                            </div>
+
+          
+                            <div class="form-check d-flex justify-content-center mt-4">
+                              <input
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value=""
+                                id="form2Example3c"
+                              />
+                              <label class="form-check-label" for="form2Example3">
+                                I agree all statements in <a href="#!">Terms of service</a>
+                              </label>
+                            </div>
+          
+                            <div class="d-flex justify-content-center  mt-3 mb-3 mb-lg-4">
+                            
+                                <!-- <div class="mb-2"> -->
+                                    <!-- <button type="button" class="btn btn-primary btn-sm justify-content-center"> -->
+                                        <!-- <a href="popupsignup.html"> Sign up </a> -->
+                                    <!-- </button> -->
+                            </div>
+                          </form>
+          
+                        </div>
+                        <!-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+          
+                          <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/draw1.png" class="img-fluid" alt="Sample image">
+          
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            </div>
+            <div class="modal-footer ">
+                    <p>Don't have an account?</p>         
+                        <button class="btn btn-outline-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel2">Sign up to get writer</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+           
+              <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                      <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                          <div class="col ">
+            
+                            <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4">Sign up</p>
+            
+                            <form class="mx-1 ">  
+                              <div class="d-flex flex-row align-items-center mb-2">
+                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                  <input type="text" id="form3Example1c" class="form-control" />
+                                  <label class="form-label" for="form3Example1c">Your Name</label>
+                                </div>
+                              </div>
+
+                              <div class="d-flex flex-row align-items-center mb-2">
+                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                  <input type="email" id="form3Example3c" class="form-control" />
+                                  <label class="form-label" for="form3Example3c">Your Email</label>
+                                </div>
+                              </div>
+            
+                              <div class="d-flex flex-row align-items-center mb-2">
+                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                  <input type="password" id="form3Example4c" class="form-control" />
+                                  <label class="form-label" for="form3Example4c">Password</label>
+                                </div>
+                              </div>
+
+                              <div class="d-flex flex-row align-items-center mb-2">
+                              <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="password" id="form3Example4cd" class="form-control" />
+                                <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                              </div>
+                            </div>
+            
+                              <!-- <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                  <input type="password" id="form3Example4cd" class="form-control" />
+                                  <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                                </div>
+                              </div> -->
+            
+                              <div class="form-check d-flex justify-content-center mt-4">
+                                <input
+                                  class="form-check-input me-2"
+                                  type="checkbox"
+                                  value=""
+                                  id="form2Example3c"
+                                />
+                                <label class="form-check-label" for="form2Example3">
+                                  I agree all statements in <a href="#!">Terms of service</a>
+                                </label>
+                              </div>
+
+                            </form>
+            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="modal-footer">
+                <p>Already registered?</p>     
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Log in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- ............................. -->
+
+
+
+
+<!-- ................modal for helper....................... -->
+
+
+<div class="modal fade" id="example2ModalToggle" aria-hidden="true" aria-labelledby="example2ModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class=" modal-title" id="example2ModalToggleLabel">Log in to help</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-12 col-xl-11">
+            <div class="card text-black" style="border-radius: 25px;">
+              <div class="card-body p-md-3">
+                <div class="row justify-content-center">
+                  <div class="col ">
+    
+                    <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4 ">Log in</p>
+    
+                    <form class="mx-1 "> 
+    
+                      <div class="d-flex flex-row align-items-center mb-2">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="email" id="form3Example3c" class="form-control" />
+                          <label class="form-label" for="form3Example3c">Your Email</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-2">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="password" id="form3Example4c" class="form-control" />
+                          <label class="form-label" for="form3Example4c">Password</label>
+                        </div>
+                      </div>
+
+    
+                      <div class="form-check d-flex justify-content-center mt-4">
+                        <input
+                          class="form-check-input me-2"
+                          type="checkbox"
+                          value=""
+                          id="form2Example3c"
+                        />
+                        <label class="form-check-label" for="form2Example3">
+                          I agree all statements in <a href="#!">Terms of service</a>
+                        </label>
+                      </div>
+    
+                      <div class="d-flex justify-content-center  mt-3 mb-3 mb-lg-4">
+                      
+                          <!-- <div class="mb-2"> -->
+                              <!-- <button type="button" class="btn btn-primary btn-sm justify-content-center"> -->
+                                  <!-- <a href="popupsignup.html"> Sign up </a> -->
+                      </div>
+                    </form>
+    
+                  </div>
+                  <!-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+    
+                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/draw1.png" class="img-fluid" alt="Sample image">
+    
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+      <div class="modal-footer ">
+              <p>Don't have an account?</p>         
+                  <button class="btn btn-outline-primary" data-bs-target="#example2ModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="example2ModalToggle2" aria-hidden="true" aria-labelledby="example2ModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="example2ModalToggleLabel2">Sign up to help</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+              <div class="card text-black" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <div class="col ">
+      
+                      <p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4">Sign up</p>
+      
+                      <form class="mx-1 ">  
+                        <div class="d-flex flex-row align-items-center mb-2">
+                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="text" id="form3Example1c" class="form-control" />
+                            <label class="form-label" for="form3Example1c">Your Name</label>
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-2">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="email" id="form3Example3c" class="form-control" />
+                            <label class="form-label" for="form3Example3c">Your Email</label>
+                          </div>
+                        </div>
+      
+                        <div class="d-flex flex-row align-items-center mb-2">
+                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" id="form3Example4c" class="form-control" />
+                            <label class="form-label" for="form3Example4c">Password</label>
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-2">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="password" id="form3Example4cd" class="form-control" />
+                          <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                        </div>
+                      </div>
+      
+                        <!-- <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" id="form3Example4cd" class="form-control" />
+                            <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                          </div>
+                        </div> -->
+      
+                        <div class="form-check d-flex justify-content-center mt-4">
+                          <input
+                            class="form-check-input me-2"
+                            type="checkbox"
+                            value=""
+                            id="form2Example3c"
+                          />
+                          <label class="form-check-label" for="form2Example3">
+                            I agree all statements in <a href="#!">Terms of service</a>
+                          </label>
+                        </div>
+
+                      </form>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+          <p>Already registered?</p>     
+        <button class="btn btn-primary" data-bs-target="#example2ModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Log in</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ........................................ -->
+
+<!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar scroll</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="#" class="btn btn-outline-light ms-4">Audio quiz</a>
+          <div class="collapse navbar-collapse ms-5" id="navbarScroll">
+            <!-- <form class="d-flex"> -->
+              <!-- <button class="btn y-2" type="submit"> -->
+                <div class="push" style="margin-left: auto;">
+                  <a class="btn btn-light m-3" style="margin-left: auto;" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Need a writer</a>
+                
+                
+            <!-- </form> -->
+            <!-- <form class="d-flex "> -->
+                <!-- <button class="btn btn-outline-light my-2" type="submit">My Bookings</button> -->
+                <a class="btn btn-light m-3" style="margin-left: auto;" data-bs-toggle="modal" href="#example2ModalToggle" role="button">Help a blind</a>
+                <!-- <a class="btn btn-light m-3" style="margin-left: auto;" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Help a blind</a> -->
+              </div>
+              <!-- </form> -->
+          </div>
+        </div>
+      </nav>
+
+     
+
+      <!-- hero section -->
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Rectangle 3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Rectangle 2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Rectangle 1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+ 
+
+      <!-- helper section  -->
+      <h1 class="mt-5">Helpers letting hands to blinds</h1>
+<div id="carouselExample1Controls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-group">
+        <div class="card">
+          <img src="Rectangle 1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">user 1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            <a class="btn btn-outline-success " style="margin-left: auto;" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Get helper</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-group">
+          <div class="card">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-group">
+          <div class="card">
+            <img src="Rectangle 1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1Controls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1Controls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- blind student  -->
+
+
+  <h1 class="mt-5">Blind students who need your help</h1>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-group">
+        <div class="card">
+          <img src="Rectangle 1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">user 1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            <a class="btn btn-outline-success " style="margin-left: auto;" data-bs-toggle="modal" href="#example2ModalToggle" role="button">Help a blind</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="Rectangle 2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-group">
+          <div class="card">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-group">
+          <div class="card">
+            <img src="Rectangle 1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card d-none d-md-block">
+            <img src="Rectangle 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mt-5 bg-dark pt-4">      
+  <div class="container">     
+  <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+      <p class="mb-1 " style="color: white">Hope you'll enjoy</h5>
+      </li>
+      <!-- <li class="list-inline-item" >
+          <button class="btn btn-outline-light" type="submit">Log Out</button>
+      </li> -->
+  </ul>    
+  </div>
+  <div class="footer-copyright text-center py-3" style="color: white">© 2020 Copyright:
+  <a href="#" style="color: white ; text-decoration: none"> lightify.com</a>
+  </div>
+
+</footer>
+
+
+</body>
+</html>

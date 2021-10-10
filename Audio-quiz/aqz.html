@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="aqz.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- <button type="button" class="btn btn-dark" id="interaction">Start Quiz</button> -->
+    <div class="text-center"> 
+        <button type="button" class="btn btn-outline-primary" id="start">Start Quiz</button>
+    </div>
+    
+    <form method='post' action='/audioquiz/'>
+        {% csrf_token %}
+        {% for q in quiz%}
+    <div class="question-box">
+        <div class="form-group" id = "question-container">
+            <label for="question">{{q.question}}</label>
+        </div>
+        <div class="form-check" id="options-container">
+            <span class="span">
+            <div class="form-check">
+                <input class="form-check-input opt" type="radio" name="{{q.question}}" id="{{q.id}}A" value="A">
+                <label class="form-check-label" for="gridRadios1">
+                    {{q.op1}}
+                </label>
+            </div>
+            </span>
+
+            <span class="span">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.id}}B" value="B">
+                <label class="form-check-label" for="gridRadios2">
+                    {{q.op2}}
+                </label>
+            </div>
+            </span>
+
+            <span class="span">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.id}}C" value="C">
+                <label class="form-check-label" for="gridRadios1">
+                    {{q.op3}}
+                </label>
+            </div>
+            </span>
+
+            <span class="span">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{q.question}}" id="{{q.id}}D" value="D">
+                <label class="form-check-label" for="gridRadios2">
+                    {{q.op4}}
+                </label>
+            </div>
+            </span>
+            <br>
+        </div>
+    </div>
+        {% endfor %}
+        <input id='timer' type='hidden' name="timer" value="">
+        <br>
+        <div class="text-center"> 
+            <button type="button" class="btn btn-outline-primary" id="start">Submit</button>
+        </div>
+        
+    </form>
+
+    
+</body>
+<script>
+    $(document).ready(function () {
+        let quiz=[];
+        $.ajax({
+            type: 'GET',
+            url: "/audioquiz/getquiz",
+            success: function (response) {
+                console.log(response.quiz);
+                quiz=response.quiz;
+
+            },
+            error: function (response) {
+                alert('An error occured')
+            }
+        });
+         function runSpeechRecognition(element) {
+
+            // new speech recognition object
+            var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+            var recognition = new SpeechRecognition();
+
+            // This runs when the speech recognition service starts
+            recognition.onstart = function () {
+                console.log('listening, please speak...');
+            };
+
+            recognition.onspeechend = function () {
+                console.log("stopped listening, hope you are done...")
+                recognition.stop();
+            }
+
+            // This runs when the speech recognition service returns result
+            recognition.onresult = function (event) {
+                var transcript = event.results[0][0].transcript;
+                var confidence = event.results[0][0].confidence;
+                console.log(transcript);
+                $(`#${element.id}${transcript.toUpperCase()}`)[0].checked = true;
+
+            };
+
+            // start recognition
+            recognition.start();
+        }
+        $("#interaction").click(() => {
+            quiz.forEach((element, index) => {
+                // new SpeechSynthesisUtterance object
+                setTimeout(() => {
+                    console.log(element);
+                    let utter = new SpeechSynthesisUtterance();
+                    utter.lang = 'en-US';
+                    utter.text = element.question;
+
+                    // event after text has been spoken
+                    utter.onend = function () {
+                        //alert('Speech has finished');
+                    }
+
+                    // speak
+                    window.speechSynthesis.speak(utter);
+
+                    let utterA = new SpeechSynthesisUtterance();
+                    utterA.lang = 'en-US';
+                    utterA.text = "option A" + element.op1;
+
+                    // event after text has been spoken
+                    utterA.onend = function () {
+                        //alert('Speech has finished');
+                    }
+
+                    // speak
+                    window.speechSynthesis.speak(utterA);
+
+                    let utterB = new SpeechSynthesisUtterance();
+                    utterB.lang = 'en-US';
+                    utterB.text = "option B" + element.op2;
+
+                    // event after text has been spoken
+                    utterB.onend = function () {
+                        //alert('Speech has finished');
+                    }
+
+                    // speak
+                    window.speechSynthesis.speak(utterB);
+
+                    let utterC = new SpeechSynthesisUtterance();
+                    utterC.lang = 'en-US';
+                    utterC.text = "option C" + element.op3;
+
+                    // event after text has been spoken
+                    utterC.onend = function () {
+                        //alert('Speech has finished');
+                    }
+
+                    // speak
+                    window.speechSynthesis.speak(utterC);
+
+                    let utterD = new SpeechSynthesisUtterance();
+                    utterD.lang = 'en-US';
+                    utterD.text = "option D" + element.op4;
+
+                    // event after text has been spoken
+                    utterD.onend = function () {
+                        //alert('Speech has finished');
+                    }
+
+                    // speak
+                    window.speechSynthesis.speak(utterD);
+
+                    let utterAns = new SpeechSynthesisUtterance();
+                    utterAns.lang = 'en-US';
+                    utterAns.text = "Speak your option we are hearing..." + element.D;
+
+                    // event after text has been spoken
+                    utterAns.onend = function () {
+                        //alert('Speech has finished');
+                        runSpeechRecognition(element);
+                    }
+
+                    // speak
+                    window.speechSynthesis.speak(utterAns);
+                }, index * 30000);
+            });
+        });
+    })
+</script>
+
+</html>

@@ -21,12 +21,12 @@ Hope this helps many students.
 
 #
 ## Screenshots
-<img src = "media-files/Home-Page.png" height = "150" width = "250"><img src = "media-files/Home-Mid.png" height = "150" width = "250">
-<img src = "media-files/Home-end.png" height = "150" width = "250">
-<img src = "media-files/students-profiles.png" height = "150" width = "250">
-<img src = "media-files/Writer Profiles.png" height = "150" width = "250">
-<img src = "media-files/audio-quiz.png" height = "150" width = "250">
-<img src = "media-files/quiz-result.png" height = "150" width = "250">
+<img src = "media-files/Home-Page.png" height = "250" width = "350"><img src = "media-files/Home-Mid.png" height = "250" width = "350">
+<img src = "media-files/Home-end.png" height = "250" width = "350">
+<img src = "media-files/students-profiles.png" height = "250" width = "350">
+<img src = "media-files/Writer Profiles.png" height = "250" width = "350">
+<img src = "media-files/audio-quiz.png" height = "250" width = "350">
+<img src = "media-files/quiz-result.png" height = "250" width = "350">
 
 #
 ## Team Contribution

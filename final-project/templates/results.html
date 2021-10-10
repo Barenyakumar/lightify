@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/sass.css' %}">
+    <title>Document</title>
+</head>
+<body>
+  
+    <div class="animate">
+
+      <div class="growing"></div>
+
+    </div>
+    <div class="container ">
+
+      <!-- <div class="bar" style="margin: auto;">
+        <div class="ball"></div>
+      </div> -->
+    
+        <div class="card-columns" style="padding: 1%; margin: auto; width: 100%;">
+            <div class="card text-center" align="centre " style="width: 100%; border:5px black solid; padding: 10px; margin: auto">
+              <div class="card" style="width: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: 700; text-align: center;">Score: {{score}}</h5>
+                  <hr style="border: 1px black solid;">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  
+                </div>
+              </div>
+              
+              <div class="card text-center" style="width: 100%;">
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Special title treatment</h5> -->
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <p class="card-text">Percentage: {{percent}}%</p> 
+                    <p class="card-text">Time Taken: {{time}} seconds</p>
+                    <p class="card-text">Correct answers: {{correct}}</p>
+                    <p class="card-text">Incorrect answers: {{wrong}}</p>
+                    <p class="card-text">Total questions: {{total}}</p>
+                  <hr style="border: 1px black solid; ">
+                </div>
+              </div>
+              
+              <div class="card text-end" style="width: 100%;">
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Special title treatment</h5> -->
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                 
+                </div>
+              </div>
+
+
+
+                    <h5 style="font-weight: 600;">ALL THE BEST FOR NEXT QUIZ!</h5>
+                    <h5><a href="/">Return to Home</a></h5>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+</body>
+</html>

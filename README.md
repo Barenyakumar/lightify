@@ -21,8 +21,7 @@ Hope this helps many students.
 
 #
 ## Screenshots
-<img src = "media-files/Home-Page.png" height = "150" width = "250">
-<img src = "media-files/Home-Mid.png" height = "150" width = "250">
+<img src = "media-files/Home-Page.png" height = "150" width = "250"><img src = "media-files/Home-Mid.png" height = "150" width = "250">
 <img src = "media-files/Home-end.png" height = "150" width = "250">
 <img src = "media-files/students-profiles.png" height = "150" width = "250">
 <img src = "media-files/Writer Profiles.png" height = "150" width = "250">

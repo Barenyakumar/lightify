@@ -1,7 +1,10 @@
 # Lightify 
+
 <img src = "media-files/Home-Page.png">
 This is a Lightify App which will help blind students to get writers and give an online exam.
 
+#
+### [Link to Deployed Application](https://lightifyapp.herokuapp.com/)
 #
 
 ## Introduction
